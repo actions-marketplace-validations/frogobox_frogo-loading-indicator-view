@@ -134,7 +134,7 @@ As seen above in the **Demo**, the indicators are as follows:
  * `SemiCircleSpinIndicator`
  
 **Row 8**
- * `com.wang.avi.sample.MyCustomIndicator`
+ * `com.frogobox.apploadingindicator.MyCustomIndicator`
 
 ## Thanks
 - [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)

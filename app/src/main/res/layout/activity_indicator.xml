@@ -11,12 +11,11 @@
         android:layout_weight="1"
         android:gravity="center">
 
-        <com.wang.avi.AVLoadingIndicatorView
+        <com.frogobox.loadingindicator.AVLoadingIndicatorView
             android:id="@+id/avi"
             style="@style/AVLoadingIndicatorView.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
 
     </LinearLayout>
 

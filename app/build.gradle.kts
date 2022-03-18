@@ -8,14 +8,14 @@ plugins {
 
 android {
     
-    compileSdk = 31
+    compileSdk = ProjectSetting.PROJECT_COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.wang.avi.sample"
-        minSdk = 21
-        targetSdk = 31
-        versionCode = 33
-        versionName = "2.1.2"
+        applicationId = ProjectSetting.PROJECT_APP_ID
+        minSdk = ProjectSetting.PROJECT_MIN_SDK
+        targetSdk = ProjectSetting.PROJECT_TARGET_SDK
+        versionCode = ProjectSetting.PROJECT_VERSION_CODE
+        versionName = ProjectSetting.PROJECT_VERSION_NAME
 
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
