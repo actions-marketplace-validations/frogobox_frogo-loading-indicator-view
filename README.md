@@ -1,8 +1,4 @@
-# PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
-
-* * *
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AVLoadingIndicatorView-green.svg?style=flat)](https://android-arsenal.com/details/1/2686)
+## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
 
 AVLoadingIndicatorView
 ===================
@@ -139,6 +135,25 @@ As seen above in the **Demo**, the indicators are as follows:
 ## Thanks
 - [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
 - [Connor Atherton](https://github.com/ConnorAtherton)
+
+
+## Colaborator
+Very open to anyone, I'll write your name under this, please contribute by sending an email to me
+
+- Mail To faisalamircs@gmail.com
+- Subject : Github _ [Github-Username-Account] _ [Language] _ [Repository-Name]
+- Example : Github_amirisback_kotlin_admob-helper-implementation
+
+Name Of Contribute
+- Muhammad Faisal Amir
+- Waiting List
+- Waiting List
+
+Waiting for your contribute
+
+## Attention !!!
+- Please enjoy and don't forget fork and give a star
+- Don't Forget Follow My Github Account
 
 ## Contact me
 
