@@ -48,12 +48,9 @@ public class CubeTransitionIndicator extends Indicator {
             translationXAnim.setInterpolator(new LinearInterpolator());
             translationXAnim.setDuration(1600);
             translationXAnim.setRepeatCount(-1);
-            translationXAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    translateX[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            translationXAnim.addUpdateListener(animation -> {
+                translateX[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
             translateY[index] = startY;
             ValueAnimator translationYAnim = ValueAnimator.ofFloat(startY, startY, getHeight() - startY, getHeight() - startY, startY);
@@ -63,12 +60,9 @@ public class CubeTransitionIndicator extends Indicator {
             translationYAnim.setDuration(1600);
             translationYAnim.setInterpolator(new LinearInterpolator());
             translationYAnim.setRepeatCount(-1);
-            addUpdateListener(translationYAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    translateY[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(translationYAnim, animation -> {
+                translateY[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
 
             animators.add(translationXAnim);
@@ -79,24 +73,18 @@ public class CubeTransitionIndicator extends Indicator {
         scaleAnim.setDuration(1600);
         scaleAnim.setInterpolator(new LinearInterpolator());
         scaleAnim.setRepeatCount(-1);
-        addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                scaleFloat = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(scaleAnim, animation -> {
+            scaleFloat = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         ValueAnimator rotateAnim = ValueAnimator.ofFloat(0, 180, 360, 1.5f * 360, 2 * 360);
         rotateAnim.setDuration(1600);
         rotateAnim.setInterpolator(new LinearInterpolator());
         rotateAnim.setRepeatCount(-1);
-        addUpdateListener(rotateAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                degrees = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(rotateAnim, animation -> {
+            degrees = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         animators.add(scaleAnim);

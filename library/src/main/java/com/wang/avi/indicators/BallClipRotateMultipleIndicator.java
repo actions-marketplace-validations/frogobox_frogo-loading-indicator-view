@@ -16,7 +16,6 @@ public class BallClipRotateMultipleIndicator extends Indicator {
 
     float scaleFloat = 1, degrees;
 
-
     @Override
     public void draw(Canvas canvas, Paint paint) {
         paint.setStrokeWidth(3);
@@ -57,23 +56,17 @@ public class BallClipRotateMultipleIndicator extends Indicator {
         ValueAnimator scaleAnim = ValueAnimator.ofFloat(1, 0.6f, 1);
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
-        addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                scaleFloat = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(scaleAnim, animation -> {
+            scaleFloat = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         ValueAnimator rotateAnim = ValueAnimator.ofFloat(0, 180, 360);
         rotateAnim.setDuration(1000);
         rotateAnim.setRepeatCount(-1);
-        addUpdateListener(rotateAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                degrees = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(rotateAnim, animation -> {
+            degrees = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
         animators.add(scaleAnim);
         animators.add(rotateAnim);

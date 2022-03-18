@@ -60,24 +60,18 @@ public class BallSpinFadeLoaderIndicator extends Indicator {
             scaleAnim.setDuration(1000);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
-            addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    scaleFloats[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(scaleAnim, animation -> {
+                scaleFloats[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
 
             ValueAnimator alphaAnim = ValueAnimator.ofInt(255, 77, 255);
             alphaAnim.setDuration(1000);
             alphaAnim.setRepeatCount(-1);
             alphaAnim.setStartDelay(delays[i]);
-            addUpdateListener(alphaAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    alphas[index] = (int) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(alphaAnim, animation -> {
+                alphas[index] = (int) animation.getAnimatedValue();
+                postInvalidate();
             });
             animators.add(scaleAnim);
             animators.add(alphaAnim);

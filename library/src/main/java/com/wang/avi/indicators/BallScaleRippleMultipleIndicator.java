@@ -30,12 +30,9 @@ public class BallScaleRippleMultipleIndicator extends BallScaleMultipleIndicator
             scaleAnim.setInterpolator(new LinearInterpolator());
             scaleAnim.setDuration(1000);
             scaleAnim.setRepeatCount(-1);
-            addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    scaleFloats[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(scaleAnim, animation -> {
+                scaleFloats[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
             scaleAnim.setStartDelay(delays[i]);
 
@@ -43,12 +40,9 @@ public class BallScaleRippleMultipleIndicator extends BallScaleMultipleIndicator
             scaleAnim.setInterpolator(new LinearInterpolator());
             alphaAnim.setDuration(1000);
             alphaAnim.setRepeatCount(-1);
-            addUpdateListener(alphaAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    alphaInts[index] = (int) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(alphaAnim, animation -> {
+                alphaInts[index] = (int) animation.getAnimatedValue();
+                postInvalidate();
             });
             scaleAnim.setStartDelay(delays[i]);
 

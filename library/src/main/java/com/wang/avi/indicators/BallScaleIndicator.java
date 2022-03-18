@@ -33,24 +33,18 @@ public class BallScaleIndicator extends Indicator {
         scaleAnim.setInterpolator(new LinearInterpolator());
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
-        addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                scale = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(scaleAnim, animation -> {
+            scale = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         ValueAnimator alphaAnim = ValueAnimator.ofInt(255, 0);
         alphaAnim.setInterpolator(new LinearInterpolator());
         alphaAnim.setDuration(1000);
         alphaAnim.setRepeatCount(-1);
-        addUpdateListener(alphaAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                alpha = (int) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(alphaAnim, animation -> {
+            alpha = (int) animation.getAnimatedValue();
+            postInvalidate();
         });
         animators.add(scaleAnim);
         animators.add(alphaAnim);

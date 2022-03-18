@@ -46,23 +46,17 @@ public class BallZigZagIndicator extends Indicator {
             translateXAnim.setDuration(1000);
             translateXAnim.setInterpolator(new LinearInterpolator());
             translateXAnim.setRepeatCount(-1);
-            addUpdateListener(translateXAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    translateX[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(translateXAnim, animation -> {
+                translateX[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
 
             translateYAnim.setDuration(1000);
             translateYAnim.setInterpolator(new LinearInterpolator());
             translateYAnim.setRepeatCount(-1);
-            addUpdateListener(translateYAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    translateY[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(translateYAnim, animation -> {
+                translateY[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
             animators.add(translateXAnim);
             animators.add(translateYAnim);

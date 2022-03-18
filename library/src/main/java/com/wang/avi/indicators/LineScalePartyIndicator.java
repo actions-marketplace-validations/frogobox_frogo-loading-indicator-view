@@ -48,12 +48,9 @@ public class LineScalePartyIndicator extends Indicator {
             scaleAnim.setDuration(durations[i]);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
-            addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    scaleFloats[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(scaleAnim, animation -> {
+                scaleFloats[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
             animators.add(scaleAnim);
         }

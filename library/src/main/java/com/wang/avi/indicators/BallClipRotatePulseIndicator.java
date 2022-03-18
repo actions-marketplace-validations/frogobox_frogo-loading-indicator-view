@@ -52,34 +52,25 @@ public class BallClipRotatePulseIndicator extends Indicator {
         ValueAnimator scaleAnim = ValueAnimator.ofFloat(1, 0.3f, 1);
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
-        addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                scaleFloat1 = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(scaleAnim, animation -> {
+            scaleFloat1 = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         ValueAnimator scaleAnim2 = ValueAnimator.ofFloat(1, 0.6f, 1);
         scaleAnim2.setDuration(1000);
         scaleAnim2.setRepeatCount(-1);
-        addUpdateListener(scaleAnim2, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                scaleFloat2 = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(scaleAnim2, animation -> {
+            scaleFloat2 = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
 
         ValueAnimator rotateAnim = ValueAnimator.ofFloat(0, 180, 360);
         rotateAnim.setDuration(1000);
         rotateAnim.setRepeatCount(-1);
-        addUpdateListener(rotateAnim, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                degrees = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(rotateAnim, animation -> {
+            degrees = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
         ArrayList<ValueAnimator> animators = new ArrayList<>();
         animators.add(scaleAnim);
@@ -87,6 +78,5 @@ public class BallClipRotatePulseIndicator extends Indicator {
         animators.add(rotateAnim);
         return animators;
     }
-
 
 }

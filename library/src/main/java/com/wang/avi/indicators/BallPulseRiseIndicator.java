@@ -52,12 +52,9 @@ public class BallPulseRiseIndicator extends Indicator {
     public ArrayList<ValueAnimator> onCreateAnimators() {
         ArrayList<ValueAnimator> animators = new ArrayList<>();
         ValueAnimator animator = ValueAnimator.ofFloat(0, 360);
-        addUpdateListener(animator, new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                degress = (float) animation.getAnimatedValue();
-                postInvalidate();
-            }
+        addUpdateListener(animator, animation -> {
+            degress = (float) animation.getAnimatedValue();
+            postInvalidate();
         });
         animator.setInterpolator(new LinearInterpolator());
         animator.setRepeatCount(-1);

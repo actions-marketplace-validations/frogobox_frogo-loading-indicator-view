@@ -26,7 +26,7 @@ public class SampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
 
-        mRecycler = (RecyclerView) findViewById(R.id.recycler);
+        mRecycler = findViewById(R.id.recycler);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
         mRecycler.setLayoutManager(layoutManager);

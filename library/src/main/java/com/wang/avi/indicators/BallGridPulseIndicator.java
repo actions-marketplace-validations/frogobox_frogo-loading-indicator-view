@@ -71,24 +71,18 @@ public class BallGridPulseIndicator extends Indicator {
             scaleAnim.setDuration(durations[i]);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
-            addUpdateListener(scaleAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    scaleFloats[index] = (float) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(scaleAnim, animation -> {
+                scaleFloats[index] = (float) animation.getAnimatedValue();
+                postInvalidate();
             });
 
             ValueAnimator alphaAnim = ValueAnimator.ofInt(255, 210, 122, 255);
             alphaAnim.setDuration(durations[i]);
             alphaAnim.setRepeatCount(-1);
             alphaAnim.setStartDelay(delays[i]);
-            addUpdateListener(alphaAnim, new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    alphas[index] = (int) animation.getAnimatedValue();
-                    postInvalidate();
-                }
+            addUpdateListener(alphaAnim, animation -> {
+                alphas[index] = (int) animation.getAnimatedValue();
+                postInvalidate();
             });
             animators.add(scaleAnim);
             animators.add(alphaAnim);
