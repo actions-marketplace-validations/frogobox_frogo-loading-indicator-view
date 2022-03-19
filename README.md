@@ -1,87 +1,90 @@
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
-
-AVLoadingIndicatorView
-===================
-
-> **Now AVLoadingIndicatorView was updated version to 2.X , If you have any question or suggestion  with this library , welcome to tell me !**
-
-## Introduction
-AVLoadingIndicatorView is a collection of nice loading animations for Android.
-
-You can also find iOS version of this [here](https://github.com/ninjaprox/NVActivityIndicatorView).
+- collection of nice loading animations for Android
 
 ## Demo
 ![avi](screenshots/avi.gif)
 
-## Usage
+## Version Release
+This Is Latest Release
 
-### Step 1
+    ~ Beta Release
+    $version_release = 0.0.1-beta01
 
-Add dependencies in build.gradle.
-```groovy
-    dependencies {
-       compile 'com.wang.avi:library:2.1.3'
+What's New??
+
+    * Collection of nice loading animations for Android *
+    * Beta Release *
+
+## Download this project
+
+### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
+
+#### <Option 1> Groovy Gradle
+
+    // Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
     }
+
+#### <Option 2> Kotlin DSL Gradle
+
+```kotlin
+// Add it in your root build.gradle.kts at the end of repositories:
+
+allprojects {
+    repositories {
+        ...
+        maven { url = uri("https://jitpack.io") }
+    }
+}
 ```
 
-### Step 2
+### Step 2. Add the dependency (build.gradle : Module)
 
-Add the AVLoadingIndicatorView to your layout:
+    #### <Option 1> Groovy Gradle
+
+        dependencies {
+            // library frogo-loading-indicator-view
+            implementation 'com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01'
+        }
+
+    #### <Option 2> Kotlin DSL Gradle
+
+        dependencies {
+            // library frogo-loading-indicator-view
+            implementation("com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01")
+        }
+
+### Step 3. Add the FrogoLoadingIndicatorView to your layout:
 
 Simple 
 
-```java
-    <com.wang.avi.AVLoadingIndicatorView
-        android:layout_width="wrap_content"  
-        android:layout_height="wrap_content"
-        app:indicatorName="BallPulseIndicator"
-        />
+```xml
+<com.frogobox.loadingindicator.FrogoLoadingIndicatorView
+    android:id="@+id/indicator"
+    style="@style/FrogoLoadingIndicatorView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:indicatorName="BallPulseIndicator" // Indicator Name
+    app:indicatorColor="#FFFFFF"/>
 ```
 
-Advance
+### Step 4. It's very simple use just like .
+```kotlin
+fun hideClick(view: View?) {
+    binding.fli.hide()
+    // or fli.smoothToHide();
+}
 
-```java
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi"
-        android:layout_width="wrap_content"  //or your custom size
-        android:layout_height="wrap_content"  //or your custom size
-        style="@style/AVLoadingIndicatorView"// or AVLoadingIndicatorView.Large or AVLoadingIndicatorView.Small
-        android:visibility="visible"  //visible or gone
-        app:indicatorName="BallPulseIndicator"//Indicator Name
-        app:indicatorColor="your color"
-        />
+fun showClick(view: View?) {
+    binding.fli.show()
+    // or fli.smoothToShow();
+}
 ```
-
-### Step 3
-
-It's very simple use just like .
-```java
-   void startAnim(){
-        avi.show();
-        // or avi.smoothToShow();
-   }
-   
-   void stopAnim(){
-        avi.hide();
-        // or avi.smoothToHide();
-   }
-   
-```
-
-## Custom Indicator
-
-See [MyCustomIndicator](https://github.com/81813780/AVLoadingIndicatorView/blob/master/app/src/main/java/com/wang/avi/sample/MyCustomIndicator.java) in Sample .
-
-## Proguard
-
-When using proguard need add rules:
-
-```
--keep class com.wang.avi.** { *; }
--keep class com.wang.avi.indicators.** { *; }
-```
-
-Indicators is load from class names, proguard may change it (rename).
 
 ## Indicators
 
@@ -132,11 +135,6 @@ As seen above in the **Demo**, the indicators are as follows:
 **Row 8**
  * `com.frogobox.apploadingindicator.MyCustomIndicator`
 
-## Thanks
-- [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
-- [Connor Atherton](https://github.com/ConnorAtherton)
-
-
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
@@ -146,39 +144,16 @@ Very open to anyone, I'll write your name under this, please contribute by sendi
 
 Name Of Contribute
 - Muhammad Faisal Amir
-- Waiting List
-- Waiting List
+- [HarlonWang](https://github.com/HarlonWang)
+- Jack Wang
 
 Waiting for your contribute
+
+### Thanks
+- [AVLoadingIndicatorView](https://github.com/HarlonWang/AVLoadingIndicatorView)
+- [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
+- [Connor Atherton](https://github.com/ConnorAtherton)
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
-
-## Contact me
-
- If you have a better idea or way on this project, please let me know, thanks :)
-
-[Email](mailto:81813780@qq.com)
-
-[Weibo](http://weibo.com/601265161)
-
-[My Blog](http://hlong.xyz)
-
-### License
-```
-Copyright 2015 jack wang
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-

@@ -19,17 +19,17 @@ class IndicatorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val indicator = intent.getStringExtra("indicator")
-        binding.avi.setIndicator(indicator)
+        binding.fli.setIndicator(indicator)
     }
 
     fun hideClick(view: View?) {
-        binding.avi.hide()
-        // or avi.smoothToHide();
+        binding.fli.hide()
+        // or fli.smoothToHide();
     }
 
     fun showClick(view: View?) {
-        binding.avi.show()
-        // or avi.smoothToShow();
+        binding.fli.show()
+        // or fli.smoothToShow();
     }
 
 }

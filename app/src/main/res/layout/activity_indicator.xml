@@ -12,7 +12,7 @@
         android:gravity="center">
 
         <com.frogobox.loadingindicator.FrogoLoadingIndicatorView
-            android:id="@+id/avi"
+            android:id="@+id/fli"
             style="@style/FrogoLoadingIndicatorView.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
