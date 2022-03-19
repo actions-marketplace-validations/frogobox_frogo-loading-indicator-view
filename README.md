@@ -1,7 +1,10 @@
 ![](docs/image/banner.png?raw=true)
 
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
-- collection of nice loading animations for Android
+[![Android CI](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/android-ci.yml)
+[![Scan with Detekt](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml)
+
+- Collection of nice loading animations for Android
 
 ## Demo
 ![avi](docs/image/demo_apps.gif?raw=true)
