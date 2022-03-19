@@ -17,7 +17,7 @@ import android.view.animation.AnimationUtils;
 
 import com.frogobox.loadingindicator.indicators.BallPulseIndicator;
 
-public class AVLoadingIndicatorView extends View {
+public class FrogoLoadingIndicatorView extends View {
 
     private static final String TAG = "AVLoadingIndicatorView";
 
@@ -58,25 +58,25 @@ public class AVLoadingIndicatorView extends View {
 
     private boolean mShouldStartAnimationDrawable;
 
-    public AVLoadingIndicatorView(Context context) {
+    public FrogoLoadingIndicatorView(Context context) {
         super(context);
         init(context, null, 0, 0);
     }
 
-    public AVLoadingIndicatorView(Context context, AttributeSet attrs) {
+    public FrogoLoadingIndicatorView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs, 0, R.style.AVLoadingIndicatorView);
+        init(context, attrs, 0, R.style.FrogoLoadingIndicatorView);
     }
 
-    public AVLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FrogoLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
+        init(context, attrs, defStyleAttr, R.style.FrogoLoadingIndicatorView);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public AVLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public FrogoLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
+        init(context, attrs, defStyleAttr, R.style.FrogoLoadingIndicatorView);
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {

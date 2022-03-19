@@ -8,9 +8,9 @@
     android:minHeight="80dp"
     android:orientation="vertical">
 
-    <com.frogobox.loadingindicator.AVLoadingIndicatorView
+    <com.frogobox.loadingindicator.FrogoLoadingIndicatorView
         android:id="@+id/indicator"
-        style="@style/AVLoadingIndicatorView"
+        style="@style/FrogoLoadingIndicatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:indicatorName="BallPulseIndicator" />
