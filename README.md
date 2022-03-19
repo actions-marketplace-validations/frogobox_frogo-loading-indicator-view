@@ -1,8 +1,10 @@
+![](docs/image/banner.png?raw=true)
+
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
 - collection of nice loading animations for Android
 
 ## Demo
-![avi](screenshots/avi.gif)
+![avi](docs/demo_apps.gif?raw=true)
 
 ## Version Release
 This Is Latest Release
@@ -45,19 +47,21 @@ allprojects {
 
 ### Step 2. Add the dependency (build.gradle : Module)
 
-    #### <Option 1> Groovy Gradle
+#### <Option 1> Groovy Gradle
 
-        dependencies {
-            // library frogo-loading-indicator-view
-            implementation 'com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01'
-        }
+    dependencies {
+        // library frogo-loading-indicator-view
+        implementation 'com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01'
+    }
 
-    #### <Option 2> Kotlin DSL Gradle
+#### <Option 2> Kotlin DSL Gradle
 
-        dependencies {
-            // library frogo-loading-indicator-view
-            implementation("com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01")
-        }
+```kotlin
+dependencies {
+    // library frogo-loading-indicator-view
+    implementation("com.github.frogobox:frogo-loading-indicator-view:0.0.1-beta01")
+}
+```
 
 ### Step 3. Add the FrogoLoadingIndicatorView to your layout:
 
@@ -143,9 +147,9 @@ Very open to anyone, I'll write your name under this, please contribute by sendi
 - Example : Github_amirisback_kotlin_admob-helper-implementation
 
 Name Of Contribute
-- Muhammad Faisal Amir
 - [HarlonWang](https://github.com/HarlonWang)
 - Jack Wang
+- Muhammad Faisal Amir
 
 Waiting for your contribute
 
@@ -157,3 +161,5 @@ Waiting for your contribute
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
+
+![](docs/image/mad_score.png?raw=true)
