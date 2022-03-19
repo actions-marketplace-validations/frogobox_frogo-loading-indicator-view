@@ -1,6 +1,7 @@
 ![](docs/image/banner.png?raw=true)
 
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
+[![](https://jitpack.io/v/frogobox/frogo-loading-indicator-view.svg)](https://jitpack.io/#frogobox/frogo-loading-indicator-view)
 [![Android CI](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/android-ci.yml)
 [![Scan with Detekt](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml)
 
