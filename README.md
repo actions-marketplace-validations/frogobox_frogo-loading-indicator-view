@@ -5,6 +5,8 @@
 [![Scan with Detekt](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-loading-indicator-view/actions/workflows/detekt.yml)
 
 - Collection of nice loading animations for Android
+- Privacy Policy [Click Here](https://github.com/frogobox/frogo-loading-indicator-view/blob/master/PRIVACY-POLICY.md)
+- License [Click Here](https://github.com/frogobox/frogo-loading-indicator-view/blob/master/LICENSE)
 
 ## Demo
 ![avi](docs/image/demo_apps.gif?raw=true)
