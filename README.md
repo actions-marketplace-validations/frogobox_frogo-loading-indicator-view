@@ -4,7 +4,7 @@
 - collection of nice loading animations for Android
 
 ## Demo
-![avi](docs/demo_apps.gif?raw=true)
+![avi](docs/image/demo_apps.gif?raw=true)
 
 ## Version Release
 This Is Latest Release
