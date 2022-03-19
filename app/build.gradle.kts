@@ -51,8 +51,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":library"))
-    
+
+    implementation(project(":frogoloadingindicator"))
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.core:core-ktx:1.7.0")
     

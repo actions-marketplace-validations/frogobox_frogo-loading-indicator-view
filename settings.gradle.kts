@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LoadingIndicator"
-include(":app", ":library")
+rootProject.name = "FrogoLoadingIndicator"
+include(":app", ":frogoloadingindicator")
